@@ -15,6 +15,7 @@ function generateCard() {
     for (let i = 0; i < card.length; i++) {
         let el = document.getElementById((i + 1).toString())
         el.innerText = card[i]
+        el.classList.remove("marked")
     }
 }
 
