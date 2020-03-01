@@ -15,10 +15,13 @@ function generateCard() {
     for (let i = 0; i < card.length; i++) {
         let el = document.getElementById((i + 1).toString())
         el.innerText = card[i]
-        el.addEventListener("click", function () {
-            this.classList.toggle("marked")
-        })
     }
 }
+
+document.querySelectorAll(".row > div").forEach(function (el) {
+    el.addEventListener("click", function () {
+        this.classList.toggle("marked")
+    })
+})
 
 generateCard()
